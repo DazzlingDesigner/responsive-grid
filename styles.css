@@ -52,6 +52,8 @@ header {
     align-items: center;
     padding: 1em;
     margin: 0 0 1em 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 header h1 {
@@ -87,6 +89,7 @@ nav {
 
 nav ul {
     list-style-type: none;
+    display: flex;
 }
 
 nav a {
@@ -107,9 +110,6 @@ nav a:hover {
 
 
 
-
-
-
 /* Tablet Media Query
 ------------------------------------*/
 @media (max-width: 799px) {
@@ -124,17 +124,16 @@ nav a:hover {
     gap: 1rem;
   }
 
-  .box:last-of-type {
-    grid-column: span 2;
+  header {
+    display: block;
+  }
+
+  nav {
+    width: fit-content;
+    margin: auto auto;
   }
 
 }
-
-
-
-
-
-
 
 
 
@@ -147,6 +146,8 @@ nav a:hover {
 
   div.wrapper {
     margin: 0;
+    border-radius: 0;
+    padding: 0;
   }
 
   main {
@@ -163,8 +164,32 @@ nav a:hover {
     font-size: 160%;
   }
 
-  
-}
+  nav ul {
+    display: flex;
+    padding: .001rem 0;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    padding: 0 0 .3rem 0;
+    margin: 0 0 1em 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  nav {
+    display: flex;
+    width: 100%;
+  }
+
+  nav a {
+    text-align: center;
+    align-items: space-around;
+  }
 
 
 
